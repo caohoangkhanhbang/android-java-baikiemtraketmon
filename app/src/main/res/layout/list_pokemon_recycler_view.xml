@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="15dp"
+        android:elevation="10dp"
+
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E82F85">
+            <LinearLayout
+                android:id="@+id/detail_backgroud"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:background="@drawable/background_blur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imagePokemon"
+                    android:src="@drawable/pokemon_mau"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/liner_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/Name"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="tên pokemon"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:id="@+id/Id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#000"
+                            android:textColor="#C8C8C8"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="10dp"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewTypes"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <ImageView
+                            android:id="@+id/icon_download"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:src="@drawable/download_icon_ddd" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
